@@ -208,7 +208,7 @@
         <li><a href="#services">SERVIÇOS</a></li>
         <li><a href="#portfolio">RELATOS</a></li>
         <li><a href="#pricing">PREÇO</a></li>
-        <li><a href="#contact">CONTATO</a></li>
+		<li><a href="#contact">CONTATO</a></li>
       </ul>
     </div>
   </div>
@@ -297,7 +297,7 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="papa-lanches.jpg" alt="Paris" width="400" height="300">
+        <img src="papa-lanches.jpg" alt="papa" width="400" height="300">
         <p><strong>Papa Lanches</strong></p>
         <p>Demora mas é bom</p>
 		<a href="https://www.google.com.br/search?q=papa%20lanches%20cidade%20baixa&oq=papa+lanches&aqs=chrome.1.69i59l2j0l4.2728j0j7&sourceid=chrome&ie=UTF-8&npsic=0&rflfq=1&rlha=0&rllag=-30038962,-51224329,226&tbm=lcl&rldimm=17115356746893698059&ved=2ahUKEwim1fDlhubdAhUEV7wKHYMZAVgQvS4wAHoECAAQIQ&rldoc=1&tbs=lrf:!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9#rlfi=hd:;si:17115356746893698059;mv:!3m12!1m3!1d1457.125257249386!2d-51.2243295!3d-30.038962499999997!2m3!1f0!2f0!3f0!3m2!1i93!2i81!4f13.1;tbs:lrf:!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9">Localização</a>
@@ -305,7 +305,7 @@
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="pampa.png" alt="New York" width="400" height="300">
+        <img src="pampa.png" alt="pampa" width="400" height="300">
         <p><strong>Pampa Burguer</strong></p>
         <p>Caro pra caralho, mas vale a pena</p>
 		<a href="https://www.google.com.br/search?q=pampa%20burger&oq=pampa+burger+&aqs=chrome..69i57j0j69i59j69i60j0l2.5168j0j7&sourceid=chrome&ie=UTF-8&npsic=0&rflfq=1&rlha=0&rllag=-30037591,-51209989,1530&tbm=lcl&rldimm=15506710239212006457&lqi=CgxwYW1wYSBidXJnZXIiA4gBAQ&ved=2ahUKEwjhq6fgwerdAhVJQZAKHdk7CuAQvS4wA3oECAEQJw&rldoc=1&tbs=lrf:!2m1!1e3!3sIAE,lf:1,lf_ui:4#rlfi=hd:;si:15506710239212006457,l,CgxwYW1wYSBidXJnZXIiA4gBAQ;mv:!3m12!1m3!1d32963.927094981926!2d-51.20879385!3d-30.015769899999995!2m3!1f0!2f0!3f0!3m2!1i90!2i229!4f13.1;tbs:lrf:!2m1!1e3!3sIAE,lf:1,lf_ui:4">Localização</a>
@@ -313,7 +313,7 @@
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="speed1.jpg" alt="San Francisco" width="400" height="300">
+        <img src="speed1.jpg" alt="speed" width="400" height="300">
         <p><strong>Speed Lanches</strong></p>
         <p>Para matar a sua larica</p>
 		<a href="https://www.google.com.br/maps/place/Speed+Lanches/@-30.0373932,-51.2250642,17z/data=!3m1!4b1!4m5!3m4!1s0x951979004309d917:0x9ae691128b3fbfd!8m2!3d-30.0373932!4d-51.2228755">Localização</a>
@@ -427,7 +427,7 @@
   <div class="row">
     <div class="col-sm-5">
       <br>Para informações de contato</br>
-      <br><span class="glyphicon glyphicon-map-marker"></span> Porto Alegre, RS</br>
+      <br><span class="glyphicon glyphicon-map-marker"></span>Rua General Vitorino n° 25, Porto Alegre, RS</br>
       <br><span class="glyphicon glyphicon-phone"></span> 51 99864-7093</br>
       <br><span class="glyphicon glyphicon-envelope"></span> glaitonlemos@gmail.com</br>
 	  <br><span class="glyphicon glyphicon-phone"></span> 51 99523-5332</br>
@@ -440,14 +440,14 @@
           <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control" id="email" name="email" placeholder="Email" required="@" required="" type="email" required>
         </div>
       </div>
       <textarea class="form-control" id="comments" name="comments" placeholder="Mensagem" rows="5"></textarea><br>
       <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Enviar</button>
-        </div>
+        <div class="col-sm-12 form-group"> 
+          <button class="btn btn-default pull-right" id="enviar" type="submit"><a href="enviar.php">Enviar</a></button>
+		</div>
       </div>
     </div>
   </div>
@@ -477,7 +477,7 @@ $(document).ready(function(){
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 900, function(){
+      }, 600, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
