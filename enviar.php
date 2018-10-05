@@ -1,4 +1,15 @@
 <?php 
+
+name = $_POST['name']
+email = $_POST['email']
+comments = $_POST['comments']
+
+echo "<p>Denuncia Recebida!</p>";
+echo "<p>Nome: ${name}</p>";
+echo "<p>email: ${email}</p>";
+echo "<p>comments: ${comments}</p>";
+
+
 // Cria uma variável que terá os dados do erro
 $erro = false;
 
@@ -51,3 +62,4 @@ if ( $erro ) {
 		echo '<b>' . $chave . '</b>: ' . $valor . '<br><br>';
 	}
 }
+?>

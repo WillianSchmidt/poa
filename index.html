@@ -423,7 +423,7 @@
 </div>
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="container-fluid bg-grey" action="enviar.php" method="post">
   <div class="row">
     <div class="col-sm-5">
       <br>Para informações de contato</br>
@@ -443,10 +443,10 @@
           <input class="form-control" id="email" name="email" placeholder="Email" required="@" required="" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Mensagem" rows="5"></textarea><br>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Mensagem" rows="5" required ></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group"> 
-          <button class="btn btn-default pull-right" id="enviar" type="submit"><a href="enviar.php">Enviar</a></button>
+		  <button class="btn btn-default pull-right" id="enviar" type="submit"><a href="enviar.php">Enviar</a></button>
 		</div>
       </div>
     </div>
