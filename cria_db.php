@@ -1,22 +1,24 @@
 <?php
 
-require 'database_functions.php';
+	require('database_functions.php');
+	$pdo = connect_to_database("mysql");
 
-function create_database($pdo) {
-    $sql = "CREATE DATABASE IF NOT EXISTS falacidadebaixa";
+	$sql = "CREATE DATABASE IF NOT EXISTS falacidadebaixa ";
     $pdo->exec($sql);
-}
 
-function create_table($pdo) {
-    $sql = "CREATE TABLE Denuncias (".
+	$pdo = null;
+	
+	$pdo = connect_to_database('falacidadebaixa');
+	
+    $sql = "CREATE TABLE IF NOT EXISTS  Denuncias (".
                "nome varchar(100) NOT NULL,".
 			   "email varchar(100) NOT NULL,".
 			   "comments varchar(500) NOT NULL,".
                "PRIMARY KEY (nome))";
 
-    $pdo->exec(sql);
-	
-	$sql = "CREATE TABLE compras (".
+    $pdo->exec($sql);
+		
+	$sql = "CREATE TABLE IF NOT EXISTS  compras (".
                "nome varchar(50) NOT NULL,".
 			   "email varchar(50) NOT NULL,".
 			   "endereco varchar(50) NOT NULL,".
@@ -31,7 +33,7 @@ function create_table($pdo) {
 			   "valor float NOT NULL,".
                "PRIMARY KEY (nome))";
 
-    $pdo->exec(sql);
-}
+    $pdo->exec($sql);
 
 ?>
+
